@@ -10,3 +10,11 @@ espanso-wayland for nixos (tested on nixos + hyprland), based on package https:/
   imports = [
     ./espanso
   ]
+
+4. Add your user to group input
+   example:
+   users.users.manu.extraGroups = [ "input" ];
+
+5. espanso service register
+
+6. espanso restart
