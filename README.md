@@ -1,24 +1,43 @@
-# espanso-wayland 2.2.1 for nixos 
-espanso-wayland for nixos (tested on nixos + hyprland), based on package https://github.com/NixOS/nixpkgs/tree/nixos-unstable/pkgs/applications/office/espanso
+# espanso-wayland 2.2.1 for NixOS
 
-1. Clone project: git clone https://github.com/ingbarrozo/espanso.git
+This project provides **espanso-wayland** for NixOS, tested on NixOS with the **hyprland** configuration. It is based on the package available in the [Nixpkgs repository](https://github.com/NixOS/nixpkgs/tree/nixos-unstable/pkgs/applications/office/espanso).
 
-2. Move ‘espanso’ folder to a desired path.
+## Installation Steps:
 
-3. Import the module to your home-manager.
+1. **Clone the Project:**
+   ```
+   git clone https://github.com/ingbarrozo/espanso.git
+   ```
 
-4. enable espanso 
+2. **Move the 'espanso' Folder:**
+   Move the downloaded **espanso** folder to your desired location.
 
-  example:
-    imports = [
-      ./espanso
-    ]
-    programs.espanso.enable = true;
+3. **Import the Module:**
+   In your **home-manager** configuration, import the **espanso** module. For example:
+   ```nix
+   home.file."espanso".source = ./espanso;
+   ```
 
-6. Add your user to group input
-   example:
+4. **Enable Espanso:**
+   Enable **espanso** in your home-manager configuration:
+   ```nix
+   programs.espanso.enable = true;
+   ```
+
+5. **Add User to 'input' Group:**
+   Ensure your user is part of the **input** group. For example:
+   ```nix
    users.users."yourusername".extraGroups = [ "input" ];
+   ```
 
-7. espanso service register
+6. **Register Espanso Service:**
+   Run the following command to register the **espanso** service:
+   ```
+   espanso service register
+   ```
 
-8. espanso restart
+7. **Restart Espanso:**
+   Restart **espanso** to apply the changes:
+   ```
+   espanso restart
+   ```
