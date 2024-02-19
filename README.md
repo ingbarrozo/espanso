@@ -15,7 +15,9 @@ This project provides **espanso-wayland** for NixOS, tested on NixOS with the **
 3. **Import the Module:**
    In your **home-manager** configuration, import the **espanso** module. For example:
    ```nix
-   home.file."espanso".source = ./espanso;
+     imports = [
+      ./espanso
+    ];
    ```
 
 4. **Enable Espanso:**
