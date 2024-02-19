@@ -13,7 +13,7 @@ espanso-wayland for nixos (tested on nixos + hyprland), based on package https:/
 
 4. Add your user to group input
    example:
-   users.users.manu.extraGroups = [ "input" ];
+   users.users."yourusername".extraGroups = [ "input" ];
 
 5. espanso service register
 
