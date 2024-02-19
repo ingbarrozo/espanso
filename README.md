@@ -6,15 +6,19 @@ espanso-wayland for nixos (tested on nixos + hyprland), based on package https:/
 2. Move ‘espanso’ folder to a desired path.
 
 3. Import the module to your home-manager.
-  example:
-  imports = [
-    ./espanso
-  ]
 
-4. Add your user to group input
+4. enable espanso 
+
+  example:
+    imports = [
+      ./espanso
+    ]
+    programs.espanso.enable = true;
+
+6. Add your user to group input
    example:
    users.users."yourusername".extraGroups = [ "input" ];
 
-5. espanso service register
+7. espanso service register
 
-6. espanso restart
+8. espanso restart
