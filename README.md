@@ -32,6 +32,11 @@ This project provides **espanso-wayland** for NixOS, tested on NixOS with the **
    users.users."yourusername".extraGroups = [ "input" ];
    ```
 
+   ```markdown
+   # Note
+   Don't forget to run `nixos-rebuild` after making changes to your configuration.
+   ```
+
 6. **Register Espanso Service:**
    Run the following command to register the **espanso** service:
    ```
